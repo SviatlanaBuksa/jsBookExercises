@@ -134,3 +134,55 @@ if (login === "Admin") {
 } */
 
 //Nullish coalescing operator '??'
+
+//LOOPS: WHILE AND FOR
+
+/* let i = 0;
+while (++i < 5) alert(i); // 1 2 3 4
+
+let i = 0;
+while (i++ < 5) alert(i); // 1 2 3 4 5
+
+for (let i = 0; i < 5; i++) alert(i); // 0 1 2 3 4
+for (let i = 0; i < 5; ++i) alert(i); // 0 1 2 3 4 */
+//The value returned by the increment is not used here, so there’s no difference between i++ and ++i.
+/* for (let i = 2; i < 11; i++) {
+  if (i % 2 == 0) {
+    console.log(i);
+  }
+}
+
+for (let i = 0; i < 3; i++) {
+  alert(`number ${i}!`);
+} */
+
+/* let i = 0;
+do {
+  alert(`number ${i}`);
+} while (++i < 3);
+
+let i = 0;
+while (i < 3) {
+  alert(`number ${i}!`);
+  i++;
+} */
+
+/* while (true) {
+  let i = +prompt("enter a number greater than 100", "");
+  if (i >= 100 || !i) break;
+}
+
+let num;
+
+do {
+  num = prompt("Enter a number greater than 100?", 0);
+} while (num <= 100 && num); */
+
+let n = +prompt("enter an integer number", "10");
+
+outer: for (let i = 2; i <= n; i++) {
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0) continue outer;
+  }
+  console.log(i);
+}
