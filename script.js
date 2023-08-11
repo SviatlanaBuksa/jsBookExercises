@@ -204,7 +204,7 @@ if (browser === "Edge") {
   alert("We hope that this page looks ok!");
 } */
 
-let a = +prompt("a?", "");
+/* let a = +prompt("a?", "");
 
 switch (a) {
   case 0:
@@ -217,4 +217,29 @@ switch (a) {
   case 3:
     alert("2,3");
     break;
+} */
+
+//FUNCTIONS
+
+/* function checkAge(age) {
+  return age > 18 || confirm("Did parents allow you?");
 }
+
+function checkAge(age) {
+  return age > 18 ? true : confirm("Did parents allow you?");
+} */
+
+/* function min(a, b) {
+  return a > b ? b : a;
+}
+
+min(2, 5); */
+
+let x = +prompt("Enter the number", "3");
+let n = +prompt("Enter the number", "2");
+function pow(x, n) {
+  return n >= 1
+    ? x ** n
+    : alert(`Power ${n} is not supported, use a positive integer`);
+}
+console.log(pow(x, n));
