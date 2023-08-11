@@ -235,11 +235,24 @@ function checkAge(age) {
 
 min(2, 5); */
 
-let x = +prompt("Enter the number", "3");
+/* let x = +prompt("Enter the number", "3");
 let n = +prompt("Enter the number", "2");
 function pow(x, n) {
   return n >= 1
     ? x ** n
     : alert(`Power ${n} is not supported, use a positive integer`);
 }
-console.log(pow(x, n));
+console.log(pow(x, n)); */
+
+//ARROW FUNCTIONS, THE BASICS
+
+/* function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do u agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+); */
