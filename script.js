@@ -256,3 +256,64 @@ ask(
   () => alert("You agreed."),
   () => alert("You canceled the execution.")
 ); */
+
+//POLYFILLS AND TRANSPILERS
+
+// OBJECTS
+
+/* Create an empty object user.
+Add the property name with the value John.
+Add the property surname with the value Smith.
+Change the value of the name to Pete.
+Remove the property name from the object. */
+
+/* let user = {};
+user.name = "John";
+user.surname = "Smith";
+user.name = "Pete";
+delete user.name; */
+
+/* let user = {};
+
+function isEmpty(object) {
+  for (let prop in object) {
+    return false;
+  }
+  return true;
+}
+
+console.log(isEmpty(user)); */
+
+/* let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+function sumUp(obj) {
+  let sum = 0;
+  for (let prop in obj) {
+    sum += obj[prop];
+  }
+  return sum;
+}
+
+console.log(sumUp(salaries)); */
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
+
+function multiplyNumeric(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number") {
+      obj[prop] *= 2;
+    }
+  }
+}
+
+multiplyNumeric(menu);
+
+console.log(menu);
