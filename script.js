@@ -300,7 +300,7 @@ function sumUp(obj) {
 
 console.log(sumUp(salaries)); */
 
-let menu = {
+/* let menu = {
   width: 200,
   height: 300,
   title: "My menu",
@@ -316,4 +316,53 @@ function multiplyNumeric(obj) {
 
 multiplyNumeric(menu);
 
-console.log(menu);
+console.log(menu); */
+
+//------Object references and copying------
+
+// 1.Object reference
+/* let user = { name: "Lana", age: "27" };
+let admin = user; //2 references - 1 object;
+
+admin.name = "Sveta"; // changing user using admin;
+//alert(user.name); //'Sveta'
+
+admin == user; //true
+admin === user; // true */
+
+//2.Shallow copy
+//2.1 for in cycle
+/* let clone = {};
+
+for (let prop in user) {
+  clone[prop] = user[prop];
+}
+
+clone.name = "Kate";
+console.log(clone.user); // 'Sveta'; */
+//2.2 Object.assign(dest,...sources), merging
+
+/* let user = { name: "Ross" };
+
+let permissions1 = {
+  canView: true,
+};
+
+let permissions2 = {
+  canEdit: true,
+};
+
+Object.assign(user, permissions1, permissions2);
+console.log(user); */
+
+/* 3. Structured clone
+
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50,
+  },
+};
+
+let clone = structuredClone(user); //doesn't work with function property; */
