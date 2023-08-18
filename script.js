@@ -366,3 +366,92 @@ let user = {
 };
 
 let clone = structuredClone(user); //doesn't work with function property; */
+
+//GARBAGE COLLECTION
+
+/* function marry(man, woman) {
+  woman.husband = man;
+  man.wife = woman;
+
+  return {
+    father: man,
+    mother: woman,
+  };
+}
+
+let family = marry(
+  {
+    name: "John",
+  },
+  {
+    name: "Ann",
+  }
+);
+
+console.log(family); */
+
+//OBJECT METHODS, 'THIS'
+
+/* let user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    alert(this.name); // leads to an error
+  },
+};
+
+let admin = user;
+user = null; // overwrite to make things obvious
+
+admin.sayHi(); */
+
+/* function makeUser() {
+  return {
+    name: "John",
+    ref() {
+      return this;
+    }
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref().name ); // John
+ */
+
+/* let calculator = {
+  read() {
+    this.a = +prompt("a?", "5");
+    this.b = +prompt("b?", "5");
+  },
+  sum() {
+    return this.a + this.b;
+  },
+  mul() {
+    return this.a * this.b;
+  },
+};
+
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul()); */
+
+/* let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function () {
+    // shows the current step
+    alert(this.step);
+    return this;
+  },
+};
+
+ladder.up().up().down().showStep().down().showStep(); */
