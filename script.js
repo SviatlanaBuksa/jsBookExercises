@@ -455,3 +455,50 @@ alert(calculator.mul()); */
 };
 
 ladder.up().up().down().showStep().down().showStep(); */
+
+//CONSTUCTOR, OPERATOR 'NEW'
+/* let obj = {};
+function A() {
+  return obj;
+}
+function B() {
+  return obj;
+}
+
+let a = new A();
+let b = new B();
+
+alert(a == b); // true */
+
+/* function Calculator() {
+  this.read = function () {
+    this.a = +prompt("a?", "5");
+    this.b = +prompt("b?", "5");
+  };
+  this.sum = function () {
+    return this.a + this.b;
+  };
+  this.mul = function () {
+    return this.a * this.b;
+  };
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert("Sum=" + calculator.sum());
+alert("Mul=" + calculator.mul()); */
+
+/* function Accumulator(startingValue) {
+  this.value = startingValue;
+  this.read = function () {
+    this.value += +prompt("value?", "10");
+  };
+}
+
+let accumulator = new Accumulator(1); // initial value 1
+console.log(accumulator);
+accumulator.read(); // adds the user-entered value
+accumulator.read(); // adds the user-entered value
+
+alert(accumulator.value); // shows the sum of these values */
