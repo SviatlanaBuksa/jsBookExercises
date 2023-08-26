@@ -502,3 +502,60 @@ accumulator.read(); // adds the user-entered value
 accumulator.read(); // adds the user-entered value
 
 alert(accumulator.value); // shows the sum of these values */
+
+//OPTIONAL CHANING ?.
+
+//SYMBOL TYPE
+
+/* The optional chaining ?. syntax has three forms:
+
+obj?.prop – returns obj.prop if obj exists, otherwise undefined.
+obj?.[prop] – returns obj[prop] if obj exists, otherwise undefined.
+obj.method?.() – calls obj.method() if obj.method exists, otherwise returns undefined. */
+
+//NUMBERS
+
+/* function sumUp() {
+  let a = +prompt("a", "10");
+  let b = +prompt("b", "2");
+  let sum = a + b;
+
+  alert(sum);
+}
+
+sumUp(); */
+//alert((6.35).toFixed(1));
+
+//alert(Math.round(6.35 * 10) / 10);
+
+/* function readNumber() {
+  let num;
+
+  do {
+    num = prompt("Enter a number please?", 0);
+  } while (!isFinite(num));
+
+  if (num === null || num === "") return null;
+
+  return +num;
+}
+
+alert(`Read: ${readNumber()}`); */
+
+/* let i = 0;
+while (i < 11) {
+  i += 0.2;
+  if (i > 9.8 && i < 10.2) alert(i);
+} */
+/* 
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+console.log(random(1, 5)); */
+
+/* function randomInteger(min, max) {
+  return Math.floor(min + Math.random() * (max - min + 1));
+}
+
+console.log(randomInteger(5, 9)); */
