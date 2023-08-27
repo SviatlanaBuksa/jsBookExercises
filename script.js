@@ -559,3 +559,35 @@ console.log(random(1, 5)); */
 }
 
 console.log(randomInteger(5, 9)); */
+
+//STRINGS
+/* 
+function ucFirst(str) {
+  if (!str) return str;
+
+  let newStr = str[0].toUpperCase() + str.slice(1);
+  return newStr;
+}
+
+alert(ucFirst("john")); */
+
+/* function checkSpam(str) {
+  str = str.toLowerCase();
+  if (str.includes("viagra") || str.includes("xxx")) {
+    return true;
+  }
+  return false;
+}
+
+alert(checkSpam("innocent rabbit")); */
+
+/* function truncate(str, maxlength) {
+  return str.length > maxlength ? str.substr(0, maxlength - 1) + "..." : str;
+}
+
+alert(truncate("What I'd like to tell on this topic is:", 20)); */
+
+/* function extractCurrencyValue(str) {
+  return +str.slice(1);
+}
+alert(extractCurrencyValue("$120") === 120); */
