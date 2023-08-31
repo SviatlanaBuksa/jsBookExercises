@@ -591,3 +591,60 @@ alert(truncate("What I'd like to tell on this topic is:", 20)); */
   return +str.slice(1);
 }
 alert(extractCurrencyValue("$120") === 120); */
+
+//ARRAYS
+
+/* let styles = ["Jazz", "Blues"];
+
+styles.push("Rock-n-Roll");
+styles[Math.floor(styles.length - 1 / 2)] = "Clasics";
+console.log(styles.shift());
+styles.unshift("Rap", "Reggae");
+console.log(styles); */
+
+/* function sumInput() {
+  let inputs = [];
+  let input;
+
+  do {
+    input = prompt("number?", "10");
+    inputs.push(input);
+  } while (isFinite(input) && input !== "" && input !== null);
+
+  inputs.pop();
+
+  let sum = 0;
+  for (let input of inputs) {
+    sum = sum + +input;
+  }
+
+  return sum;
+} */
+
+//A maximal subarray
+/* function getMaxSubSum(arr) {
+  let maxSum = 0; // if we take no elements, zero will be returned
+
+  for (let i = 0; i < arr.length; i++) {
+    let sumFixedStart = 0;
+    for (let j = i; j < arr.length; j++) {
+      sumFixedStart += arr[j];
+      maxSum = Math.max(maxSum, sumFixedStart);
+    }
+  }
+
+  return maxSum;
+}
+
+function getMaxSubSum(arr) {
+  let maxSum = 0;
+  let partialSum = 0;
+
+  for (let item of arr) { // for each item of arr
+    partialSum += item; // add it to partialSum
+    maxSum = Math.max(maxSum, partialSum); // remember the maximum
+    if (partialSum < 0) partialSum = 0; // zero if negative
+  }
+
+  return maxSum;
+} */
