@@ -675,7 +675,7 @@ console.log(filtered);
 console.log(arr); */
 
 //Filter range "in place"
-function filterRangeInPlace(arr, a, b) {
+/* function filterRangeInPlace(arr, a, b) {
   for (let i = 0; i < arr.length; i++) {
     let val = arr[i];
 
@@ -690,4 +690,63 @@ let arr = [5, 3, 8, 1];
 
 filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
 
-alert(arr); // [3, 1]
+alert(arr); // [3, 1] */
+
+//Sort in decreasing order
+
+/* let arr = [5, 2, 1, -10, 8];
+
+arr.sort((a, b) => b - a);
+console.log(arr); */
+
+//Copy and sort array
+
+/* let arr = ["HTML", "JavaScript", "CSS"];
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let sorted = copySorted(arr); */
+
+//Create an extendable calculator
+
+/* let calc = new Calculator();
+
+function Calculator() {
+  this.methods = {
+    "-": (a, b) => a - b,
+    "+": (a, b) => a + b,
+  };
+  this.calculate = function (str) {
+    arr = str.split(" ");
+    a = +arr[0];
+    op = arr[1];
+    b = +arr[2];
+
+    return this.methods[op](a, b);
+  };
+  this.addMethod = function (name, func) {
+    this.methods[name] = func;
+  };
+}
+
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert(result); // 8 */
+
+//Map to names
+
+/* let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [john, pete, mary];
+
+let names = users.map((item) => item.name);
+
+console.log(names); */
