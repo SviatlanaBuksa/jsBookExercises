@@ -750,3 +750,78 @@ let users = [john, pete, mary];
 let names = users.map((item) => item.name);
 
 console.log(names); */
+
+// MAP TO OBJECTS
+
+/* let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [john, pete, mary];
+
+ let usersMapped = users.map(function (item) {
+  return {
+    fullName: item.name + " " + item.surname,
+    id: item.id,
+  };
+}); 
+let usersMapped = users.map((user) => ({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id,
+}));
+
+alert(usersMapped[0].id); // 1
+alert(usersMapped[0].fullName); // John Smith */
+
+// SORT USERS BY AGE
+
+/* let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [pete, john, mary];
+
+function sortByAge(users) {
+  return users.sort((user, nextUser) => user.age - nextUser.age);
+}
+
+console.log(sortByAge(arr));
+
+alert(arr[0].name);
+alert(arr[1].name);
+alert(arr[2].name); */
+
+//Shuffle an array
+//Fisher-Yates algorithm
+
+/* let arr = [1, 2, 3];
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+console.log(shuffle(arr)); */
+
+// GET AVERAGE AGE
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [john, pete, mary];
+/* function getAverageAge(users) {
+  let sum = 0;
+  users.forEach((user) => {
+    sum += user.age;
+  });
+  return sum / users.length;
+} */
+
+function getAverageAge(users) {
+  return users.reduce((sum, user) => sum + user.age, 0) / users.length;
+}
+
+console.log(getAverageAge(arr));
