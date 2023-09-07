@@ -807,11 +807,11 @@ function shuffle(arr) {
 console.log(shuffle(arr)); */
 
 // GET AVERAGE AGE
-let john = { name: "John", age: 25 };
+/* let john = { name: "John", age: 25 };
 let pete = { name: "Pete", age: 30 };
 let mary = { name: "Mary", age: 29 };
 
-let arr = [john, pete, mary];
+let arr = [john, pete, mary]; */
 /* function getAverageAge(users) {
   let sum = 0;
   users.forEach((user) => {
@@ -820,8 +820,52 @@ let arr = [john, pete, mary];
   return sum / users.length;
 } */
 
-function getAverageAge(users) {
+/* function getAverageAge(users) {
   return users.reduce((sum, user) => sum + user.age, 0) / users.length;
 }
 
-console.log(getAverageAge(arr));
+console.log(getAverageAge(arr)); */
+
+//FILTER UNIQUE ARRAY MEMBERS
+/* let strings = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+function unique(arr) {
+  let result = [];
+  for (let str of arr) {
+    if (!result.includes(str)) {
+      result.push(str);
+    }
+  }
+  return result;
+}
+
+//console.log(strings);
+
+console.log(unique(strings)); */
+
+// CREATE KEYED OBJECT FROM ARRAY
+
+/* let users = [
+  { id: "john", name: "John Smith", age: 20 },
+  { id: "ann", name: "Ann Smith", age: 24 },
+  { id: "pete", name: "Pete Peterson", age: 31 },
+];
+
+function groupById(users) {
+  return users.reduce(function (obj, current) {
+    obj[current.id] = current;
+    return obj;
+  }, {});
+}
+
+let usersById = groupById(users);
+console.log(usersById); */
