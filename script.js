@@ -911,3 +911,50 @@ for (let num of range) {
 let arr = Array.from(arrayLike);
 console.log(arr);
 console.log(arr.pop());  */
+
+//MAP AND SET
+//Filter unique array members
+
+/* let values = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
+console.log(unique(values));
+ */
+
+//Filter anagrams
+
+/* let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+function aclean(arr) {
+  let map = new Map();
+
+  for(let word of arr){
+    let sorted = word.toLowerCase().split('').sort().join('');
+    map.set(sorted, word);
+  }
+  return Array.from(map.values());
+}
+
+aclean(arr); */
+
+//Iterable keys
+
+/* let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+keys.push("more"); */
