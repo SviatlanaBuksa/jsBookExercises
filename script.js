@@ -979,3 +979,38 @@ readMessages.add(messages[0]);
 alert(`Read message 0:` + readMessages.has(messages[0]));
 
 messages.shift(); */
+
+//OBJECTS.KEYS, VALUES, ENTRIES
+
+//Sum the properties
+
+/* let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+function sumSalaries(salaries) {
+  /*  let result = 0;
+  for (let value of Object.values(salaries)) {
+    result += value;
+  }
+  return result; 
+  return Object.values(salaries).reduce((a, b) => a + b, 0);
+}
+
+alert(sumSalaries(salaries)); */
+
+//Count properties
+
+/* function count(obj) {
+  return Object.keys(obj).length;
+}
+
+let user = {
+  name: "John",
+  age: 30,
+};
+
+alert(count(user));
+ */
