@@ -1014,3 +1014,34 @@ let user = {
 
 alert(count(user));
  */
+
+//DESTRUCTURING ASSIGNMENT
+
+/* let user = {
+  name: "John",
+  years: 30,
+};
+
+let { name, years: age, isAdmin = false } = user;
+alert(name); // John
+alert(age); // 30
+alert(isAdmin); // false */
+
+//The maximal salary
+/* let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+function topSalary(salaries) {
+  let result = 0;
+  let name = null;
+  for (const [key, value] of Object.entries(salaries)) {
+    if (value > result) {
+      result = value;
+      name = key;
+    }
+  }
+  return name;
+} */
