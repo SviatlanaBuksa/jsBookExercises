@@ -1045,3 +1045,104 @@ function topSalary(salaries) {
   }
   return name;
 } */
+
+//DATE AND TIME
+
+//Create a date
+
+/* let date = new Date(2012, 1, 20, 3, 12);
+alert(date); */
+
+//Show a weekday
+/* let date = new Date(2012, 0, 3);
+let day = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+function getWeekDay(date) {
+  return day[date.getDay()];
+}
+alert(getWeekDay(date)); */
+
+//European weekday
+
+/* let date = new Date(2012, 0, 3);
+
+function getLocalDay(date) {
+  let day = date.getDay();
+
+  if (day == 0) {
+    day = 7;
+  }
+  return day;
+}
+
+alert(getLocalDay(date)); */
+
+//Which day of month was many days ago?
+/* let date = new Date(2015, 0, 2);
+function getDateAgo(date, days) {
+  let copyDate = new Date(date);
+
+  copyDate.setDate(date.getDate() - days);
+  return copyDate.getDate();
+}
+
+alert(getDateAgo(date, 1));
+alert(getDateAgo(date, 2));
+alert(getDateAgo(date, 365)); */
+
+//Last day of month?
+/* function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  return date.getDate();
+}
+
+console.log(getLastDayOfMonth(2012, 1)); */
+
+//How many seconds have passed today?
+
+/* function getSecondsToday() {
+  let date = new Date();
+  return 3600 * date.getHours() + 60 * date.getMinutes() + date.getSeconds();
+}
+console.log(getSecondsToday()); */
+
+//How many seconds till tomorrow?
+/* function getSecondsToTomorrow() {
+  let now = new Date();
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  return Math.round((tomorrow - now) / 1000);
+}
+console.log(getSecondsToTomorrow()); */
+
+//Format the relative date
+
+function formatDate(date) {
+  let diff = new Date() - date;
+
+  if (diff < 1000) {
+    return "right now";
+  }
+
+  let sec = Math.floor(diff / 1000);
+
+  if (sec < 60) {
+    return sec + "sec. ago";
+  }
+
+  let min = Math.floor(diff / 60000);
+
+  if (min < 60) {
+    return min + "min. ago";
+  }
+
+  let d = date;
+  d = [
+    "0" + d.getDate(),
+    "0" + (d.getMonth() + 1),
+    "" + d.getFullYear(),
+    "0" + d.getHours(),
+    "0" + d.getMinutes(),
+  ].map(component.slice(-2));
+
+  return d.slice(0, 3).join(".") + " " + d.slice(3).join(":");
+}
+formatDate(new Date(new Date() - 86400 * 1000));
