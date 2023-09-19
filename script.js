@@ -1115,7 +1115,7 @@ console.log(getSecondsToTomorrow()); */
 
 //Format the relative date
 
-function formatDate(date) {
+/* function formatDate(date) {
   let diff = new Date() - date;
 
   if (diff < 1000) {
@@ -1145,4 +1145,40 @@ function formatDate(date) {
 
   return d.slice(0, 3).join(".") + " " + d.slice(3).join(":");
 }
-formatDate(new Date(new Date() - 86400 * 1000));
+formatDate(new Date(new Date() - 86400 * 1000)); */
+
+//JSON METHODS, TOJSON
+
+//Turn the object into JSON and back
+/* let user = {
+  name: "John Smith",
+  age: 35,
+};
+
+let json = JSON.stringify(user);
+
+console.log(json);
+
+let fromJson = JSON.parse(json);
+console.log(fromJson); */
+
+//Exclude backreferences
+
+/* let room = {
+  number: 23,
+};
+
+let meetup = {
+  title: "Conference",
+  occupiedBy: [{ name: "John" }, { name: "Alice" }],
+  place: room,
+};
+
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+console.log(
+  JSON.stringify(meetup, function replacer(key, value) {
+    return (key != "" && value == meetup) || key == "self" ? undefined : value;
+  })
+); */
