@@ -1182,3 +1182,122 @@ console.log(
     return (key != "" && value == meetup) || key == "self" ? undefined : value;
   })
 ); */
+
+//RECURSION
+
+//Sum all numbers till the given one
+//using a for loop
+/* function sumTo(n) {
+  let result = 0;
+  for (let i = n; i > 0; i--) {
+    result += i;
+  }
+  return result;
+}
+
+console.log(sumTo(100)); */
+
+//using recursion
+
+/* function sumTo(n) {
+  if (n == 0) {
+    return n;
+  } else {
+    return n + sumTo(n - 1);
+  }
+}
+
+console.log(sumTo(100)); */
+
+// arithmetic progression
+
+/* function sumTo(n) {
+  return (n * (1 + n)) / 2;
+}
+
+console.log(sumTo(4)); */
+
+// Calculate factorial
+
+/* function factorial(n) {
+  if (n == 1) {
+    return n;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+alert(factorial(3)); */
+
+//Fibonacci numbers
+
+/* function fib(n) {
+  let a = 1;
+  let b = 1;
+
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+
+alert(fib(7)); */
+
+//Output a single-linked list
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+/* function printList(list) {
+  let tmp = list;
+  while (tmp) {
+    alert(tmp.value);
+    tmp = tmp.next;
+  }
+}
+printList(list);  */
+
+/* function printList(list) {
+  tmp = list;
+  alert(tmp.value);
+  if (tmp.next) {
+    printList(tmp.next);
+  }
+}
+
+printList(list); */
+
+/* function printReverseList(list) {
+  if (list.next) {
+    printReverseList(list.next);
+  }
+  alert(list.value);
+}
+
+printReverseList(list); */
+
+/* function printReverseList(list) {
+  let arr = [];
+  let tmp = list;
+  while (tmp) {
+    arr.push(tmp.value);
+    tmp = tmp.next;
+  }
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    alert(arr[i]);
+  }
+}
+printReverseList(list); */
