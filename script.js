@@ -1301,3 +1301,17 @@ printReverseList(list); */
   }
 }
 printReverseList(list); */
+
+//REST PARAMETERS AND SPREAD SYNTAX
+
+//VARIABLE SCOPE, CLOSURE
+
+//sum with closures
+
+/* function sum(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+
+console.log(sum(1)(2)); */
