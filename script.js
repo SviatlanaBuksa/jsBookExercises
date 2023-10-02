@@ -1315,3 +1315,66 @@ printReverseList(list); */
 }
 
 console.log(sum(1)(2)); */
+
+//Filter through function
+
+//filter inBetween
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+/* function inBetween(a, b) {
+  return function (x) {
+    return x >= a && x <= b;
+  };
+}
+alert(arr.filter(inBetween(3, 6))); */
+
+//filter inArray
+
+/* function inArray(arr) {
+  return function (x) {
+    return arr.includes(x);
+  };
+}
+alert(arr.filter(inArray([1, 2, 10]))); */
+
+//Sort by field
+
+/* let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" },
+];
+
+function byField(fieldName) {
+  return (a, b) => (a[fieldName] > b[fieldName] ? 1 : -1);
+}
+
+alert(users.sort(byField("name"))); */
+
+//[object Object],[object Object],[object Object]
+
+//Army of functions
+
+function makeArmy() {
+  let shooters = [];
+
+  let i = 0;
+  while (i < 10) {
+    let j = i;
+    let shooter = function () {
+      // create a shooter function,
+      alert(j); // that should show its number
+    };
+    shooters.push(shooter);
+    // and add it to the array
+    i++;
+  }
+
+  // ...and return the array of shooters
+  return shooters;
+}
+
+let army = makeArmy();
+army[0](); // 10 from the shooter number 0
+army[1](); // 10 from the shooter number 1
+army[2](); // 10 ...and so on.
