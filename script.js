@@ -1319,7 +1319,7 @@ console.log(sum(1)(2)); */
 //Filter through function
 
 //filter inBetween
-let arr = [1, 2, 3, 4, 5, 6, 7];
+//let arr = [1, 2, 3, 4, 5, 6, 7];
 
 /* function inBetween(a, b) {
   return function (x) {
@@ -1355,7 +1355,7 @@ alert(users.sort(byField("name"))); */
 
 //Army of functions
 
-function makeArmy() {
+/* function makeArmy() {
   let shooters = [];
 
   let i = 0;
@@ -1377,4 +1377,17 @@ function makeArmy() {
 let army = makeArmy();
 army[0](); // 10 from the shooter number 0
 army[1](); // 10 from the shooter number 1
-army[2](); // 10 ...and so on.
+army[2](); // 10 ...and so on. */
+
+//THE OLD 'VAR'
+/* var has no block scope
+var tolerates redeclaration and reasignment
+var can be declared below their use */
+
+//GLOBAL OBJECT
+/* 
+-the global object holds variables and functions that should be available anywhere;
+-universal name - globalThis(window if browser);
+- if declared with var - property of the global object;
+-access directly as window.x;
+*/
