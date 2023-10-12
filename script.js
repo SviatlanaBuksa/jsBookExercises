@@ -1391,3 +1391,29 @@ var can be declared below their use */
 - if declared with var - property of the global object;
 -access directly as window.x;
 */
+
+//FUNCTION OBJECT, NFE
+/* functions are objects;
+their properties - name, length(number of arguments, rest parameters are not counted)
+
+if FE(not in the main code flow - carry the name and called Named Function Expression(NFE) for reference itself,etc.) */
+
+//Set and decrease for counter
+
+/* function makeCounter(value) {
+  let count = 0;
+  function counter() {
+    return counter.count++;
+  }
+
+  counter.count = 0;
+  counter.set = (value) => (count = value);
+  counter.decrease = () => count--;
+  return counter;
+}
+
+let counter = makeCounter();
+
+alert(counter()); // 0
+alert(counter()); // 1
+alert(counter.set(10)); */
