@@ -1417,3 +1417,8 @@ let counter = makeCounter();
 alert(counter()); // 0
 alert(counter()); // 1
 alert(counter.set(10)); */
+
+//THE 'NEW FUNCTION' SYNTAX
+let func = new Function("a,b", "return a+b");
+
+/* accsses only global LE,not the outer one. Allows to turn any string into a function(ex. when we get reply from a server) */
