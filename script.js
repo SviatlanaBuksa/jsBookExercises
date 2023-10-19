@@ -1419,6 +1419,36 @@ alert(counter()); // 1
 alert(counter.set(10)); */
 
 //THE 'NEW FUNCTION' SYNTAX
-let func = new Function("a,b", "return a+b");
+/*let func = new Function("a,b", "return a+b");
 
-/* accsses only global LE,not the outer one. Allows to turn any string into a function(ex. when we get reply from a server) */
+ accsses only global LE,not the outer one. Allows to turn any string into a function(ex. when we get reply from a server) */
+
+//SCHEDULING: SETTIMEOUT AND SETINTERVAL
+
+//Output every second
+
+/* function printNumbers(from, to) {
+  let current = from;
+
+  let timerId = setInterval(function () {
+    alert(current);
+    if (current == to) {
+      clearInterval(timerId);
+    }
+    current++;
+  }, 1000);
+} */
+
+/* function printNumbers(from, to) {
+  let current = from;
+
+  setTimeout(function go() {
+    alert(current);
+    if (current < to) {
+      setTimeout(go, 1000);
+    }
+    current++;
+  }, 1000);
+}
+
+printNumbers(5, 10); */
