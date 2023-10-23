@@ -1452,3 +1452,26 @@ alert(counter.set(10)); */
 }
 
 printNumbers(5, 10); */
+
+//DECORATORS AND FORWARDING, CALL/APPLY
+
+/* decorator is a special function that takes another function and alters its behavior
+---benefits---
+-the caching decorator can be applied to diffrent functions;
+-it doesn't increase the complexity;
+-we can combine multiple decorators;
+
+!-it's not suited to work with object methods;
+ */
+
+/* The built-in func func.call(context, ...args) allows to call a func explicitly setting this*/
+
+/* func.apply(context, arguments) 
+call expects a list of arguments, while apply takes an array-like object with them
+
+Passing all args along with the context to another func - call forwarding.
+
+Method borrowing: we take a join method from a regular array([].join) and use [].join.call to run it in the context og args.
+
+If the original func had properties on it likefunc.calledCount or whatever then the decorated one will not provide them.
+*/
